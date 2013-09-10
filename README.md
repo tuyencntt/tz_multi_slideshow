@@ -1,4 +1,4 @@
-# TZ Multi Slideshow - Joomla 3 & Joomla 2.5
+# TZ Multi Slideshow - J3 & J2.5
 
 Apart from a normal slideshow module - single slideshow, this is a completely different module:  Multislide. Why multi? Because this integrates three famous slideshows in the world: flexslider, zoomslider and nivoslider into one - which certainly not only saves time but makes users feel so excited. 
 
