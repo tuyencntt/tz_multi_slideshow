@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7" client="site"
+	method="upgrade"
+>
+	<name>TZ MULTI SLIDESHOW </name>
+	<author>Templaza.,JSC</author>
+	<creationDate>September 2013</creationDate>
+	<copyright>Copyright (C) 2011 Templaza.,JSC. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@templaza.com</authorEmail>
+	<authorUrl>http://www.TemPlaza.com</authorUrl>
+	<version>1.0</version>
+	<description>Module Multi  Slide Show Technical Support:  Forum - http://www.TemPlaza.com/forum/
+
+    </description>
+	<files>
+		<filename module="mod_tz_multi_slideshow">mod_tz_multi_slideshow.php</filename>
+        <filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_tz_multi_slideshow.xml</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+        <folder>images</folder>
+	</files>
+    <languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_tz_multi_slideshow.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_tz_multi_slideshow.sys.ini</language>
+	</languages>
+	<config>
+	<fields name="params">
+        <fieldset name="basic">
+
+            <field name="content_manager" type="radio" default="tz_portfolio" label="BASE_CONTENT_MANAGER" description="">
+              <option value="tz_portfolio">TZ Portfolio Content</option>
+              <option value="joomla_content">Joomla Content</option>
+            </field>
+
+            <field name="categories" type="category" extension="com_content" multiple="true" size="10" label="BASE_CATEGORIES" description="" />
+            <field name="limit" type="text" label="Limit article" default="5" description="" />
+
+            <field name="image" type="list" default="L" label="BASE_IMAGE_TYPE" description="BASE_IMAGE_TYPE_DES">
+                <option value="XS">Xsmall</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Xlarge</option>
+            </field>
+            <field name="image_thumb" type="list" default="XS" label=" BASE_IMAGE_THUMBNAIL" description="BASE_IMAGE_THUMBNAIL">
+                <option value="XS">Xsmall</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Xlarge</option>
+            </field>
+
+            <field type="radio" name="order" default="ASC"
+                   label="BASE_ORDER">
+                <option value="ASC">Ascending</option>
+                <option value="DESC">Descending</option>
+            </field>
+            <field type="list" name="orderby" default="created"
+                   label="BASE_ORDER_BY">
+                <option value="title">Title</option>
+                <option value="created">Date Create</option>
+                <option value="hits">Hits</option>
+                <option value="ordering">Ordering</option>
+            </field>
+            <field type="list" name="item-type" default="created"
+                   label="Item Type">
+                <option value="image">Image</option>
+                <option value="video">Video</option>
+                <option value="gallery">Gallery</option>
+            </field>
+
+
+            <field type="radio" name="title" default="1"
+                   label="BASE_SHOW_TITLE">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </field>
+            <field type="radio" name="title_link" default="0" label="BASE_SHOW_TITLE_LINK">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </field>
+
+            <field type="radio" name="introtext" default="1"
+                   label="BASE_SHOW_INTROTEXT">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </field>
+            <field type="text" name="limit_intro" label="BASE_LIMIT_INTROTEXT" description="BASE_LIMIT_INTROTEXT_DES"/>
+
+
+		</fieldset>
+            <field type="radio" name="loadjquery" default="1" label="Load jQuery Library">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </field>
+
+        <fieldset name="Zoom_slider">
+            <field type="text" name="zoom_width" label="ZOOM_WIDTH" description="ZOOM_WIDTH_DES"/>
+            <field type="text" name="zoom_height" label="ZOOM_HEIGHT" description="ZOOM_HEIGHT_DES"/>
+
+            <field name="zoom_overlay" type="radio" class="btn-group" label="ZOOM_SHOW_OVERLAY" default="true" size="30" description="" >
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </field>
+
+        </fieldset>
+
+        <fieldset name="Flex_slider">
+            <field name="flex_width" type="text" label="FLEX_WIDTH" default="1500"  class="btn-group"  size="30" description="" />
+            <field name="flex_height" type="text" label="FLEX_HEIGHT" default="744"  class="btn-group"  size="30" description="" />
+            <field name="tz_autoslide" type="radio" class="btn-group" label="FLEX_AUTO_SLIDE" default="true" size="30" description="" >
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </field>
+            <field name="tz_direction_slide" type="radio" label="FLEX_SHOW_DIRECTION" default="true"  class="btn-group"  size="30" description="" >
+                <option value="true">JSHOW</option>
+                <option value="false">JHIDE</option>
+            </field>
+
+            <field name="tz_effect" type="radio" label="FLEX_EFFECT" default="slide"  class="btn-group"  size="30" description="">
+                <option value="slide">Slide</option>
+                <option value="fade">Fade</option>
+            </field>
+
+            <field name="flex_thumb" type="radio" label="FLEX_SHOW_THUMB" default="true"  class="btn-group"  size="30" description="">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </field>
+            <field name="tz_slideSpeed" type="text" label="FLEX_SLIDE_SPEED" default="7000"  class="btn-group"  size="30" description="" />
+            <field name="tz_speed" type="text" label="FLEX_ANIMATION_SPEED" default="1000"  class="btn-group"  size="30" description="" />
+
+            <field name="flex_bottom_thumb" type="text" label="FLEX_THUMB_BOTTOM" default="-85"  class="btn-group"  size="30" description="position thumb slider example -85" />
+            <field name="flex_width_thumb" type="text" label="FLEX_THUMB_WIDTH" default="300"  class="btn-group"  size="30" description="" />
+
+            <field name="flex_loop" type="radio" label="FLEX_LOOP" default="true"  class="btn-group"  size="30" description="">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </field>
+
+            <field name="flex_overlay" type="radio" label="FLEX_SHOW_OVERLAY" default="true"  class="btn-group"  size="30" description="">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </field>
+
+            <field name="flex_overlay_opacity" type="text" label="FLEX_OVERLAY_OPACITY" default="0.3"   size="30" description="" />
+        </fieldset>
+        <fieldset name="nivoslider">
+            <field name="nivo_width" type="text" default="1500" label="NIVO_WIDTH"/>
+            <field name="nivo_height" type="text" default="744" label="NIVO_HEIGHT"/>
+            <field type="list" name="nivo_theme" default="default"
+                   label="NIVO_THEMES">
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </field>
+            <field type="list" name="nivo_effect" default="random"
+                   label="NIVO_EFFECT">
+                <option value="random">Random</option>
+                <option value="fade">Fade</option>
+                <option value="sliceDownRight">Slice Down Right</option>
+                <option value="sliceDownLeft">Slice Down Left</option>
+                <option value="fold">Fold</option>
+                <option value="boxRandom">Box Random</option>
+                <option value="boxRain">Box Rain</option>
+                <option value="boxRainGrowReverse">Box Rain GrowReverse</option>
+            </field>
+
+            <field name="nivo_speed" type="text" default="500" label="NIVO_SPEED"/>
+            <field name="nivo_pause" type="text" default="3000" label="NIVO_PAUSE"/>
+            <field name="nivo_directionNav" type="radio" label="DirectionNav" default="true"  class="btn-group"  size="30" description="">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </field>
+            <field name="nivo_opacity" type="text" default="0.3" label="Overlay"/>
+        </fieldset>
+
+        <fieldset
+                name="advanced">
+
+            <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+            <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+        </fieldset>
+
+		</fields>
+	</config>
+
+</extension>
