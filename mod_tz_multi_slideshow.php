@@ -50,7 +50,6 @@ $tz_thumb = $params->get('tz_thumb');
 $supersized_thumb_bottom = $params->get('supersized_thumb_bottom');
 $music_name = substr($audio_mp3, 0, -4);
 
-
 //Options Moving Box
 $mv_startPanel = $params->get('startPanel');
 if ($params->get('moving_loop') == 1) {
